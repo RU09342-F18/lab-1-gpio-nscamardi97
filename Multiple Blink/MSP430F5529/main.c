@@ -1,3 +1,7 @@
+// Author: Nick Scamardi
+// Written: 9/17/2018
+// Last Updated: 9/21/2018
+
 #include <msp430.h> 
 
 int main(void)
