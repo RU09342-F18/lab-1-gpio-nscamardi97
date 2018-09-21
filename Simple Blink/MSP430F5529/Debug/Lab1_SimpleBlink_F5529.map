@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v18.1.2                     
 ******************************************************************************
->> Linked Thu Sep 13 19:09:40 2018
+>> Linked Fri Sep 21 15:41:28 2018
 
 OUTPUT FILE NAME:   <Lab1_SimpleBlink_F5529.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00004400
@@ -85,7 +85,7 @@ MEMORY CONFIGURATION
   INT61                 0000fffa   00000002  00000002  00000000  RWIX
   INT62                 0000fffc   00000002  00000002  00000000  RWIX
   RESET                 0000fffe   00000002  00000002  00000000  RWIX
-  FLASH2                00010000   00014400  00000032  000143ce  RWIX
+  FLASH2                00010000   00014400  0000002e  000143d2  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -186,19 +186,19 @@ SYSNMI     0    0000fffc    00000002
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430x_lc_rd_eabi.lib : boot.c.obj (.reset)
 
-.text      0    00010000    00000032     
-                  00010000    00000028     main.obj (.text:main)
-                  00010028    00000006     rts430x_lc_rd_eabi.lib : exit.c.obj (.text:abort)
-                  0001002e    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+.text      0    00010000    0000002e     
+                  00010000    00000024     main.obj (.text:main)
+                  00010024    00000006     rts430x_lc_rd_eabi.lib : exit.c.obj (.text:abort)
+                  0001002a    00000004                            : pre_init.c.obj (.text:_system_pre_init)
 
 MODULE SUMMARY
 
        Module             code   ro data   rw data
        ------             ----   -------   -------
     .\
-       main.obj           40     0         0      
+       main.obj           36     0         0      
     +--+------------------+------+---------+---------+
-       Total:             40     0         0      
+       Total:             36     0         0      
                                                   
     C:\ti\ccsv8\tools\compiler\ti-cgt-msp430_18.1.2.LTS\lib\rts430x_lc_rd_eabi.lib
        boot.c.obj         20     2         0      
@@ -232,7 +232,7 @@ MODULE SUMMARY
                                                   
        Stack:             0      0         160    
     +--+------------------+------+---------+---------+
-       Grand Total:       78     46        160    
+       Grand Total:       74     46        160    
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -321,7 +321,7 @@ address   name
 00000732  ADC12MEM9             
 00000733  ADC12MEM9_H           
 00000732  ADC12MEM9_L           
-00010028  C$$EXIT               
+00010024  C$$EXIT               
 000008c0  CBCTL0                
 000008c1  CBCTL0_H              
 000008c0  CBCTL0_L              
@@ -1020,8 +1020,8 @@ ffffffff  __c_args__
 00004400  _c_int00_noinit_noargs
 0000fffe  _reset_vector         
 00004360  _stack                
-0001002e  _system_pre_init      
-00010028  abort                 
+0001002a  _system_pre_init      
+00010024  abort                 
 00010000  main                  
 
 
@@ -1806,9 +1806,9 @@ address   name
 0000fffc  __TI_int62            
 0000fffe  _reset_vector         
 00010000  main                  
-00010028  C$$EXIT               
-00010028  abort                 
-0001002e  _system_pre_init      
+00010024  C$$EXIT               
+00010024  abort                 
+0001002a  _system_pre_init      
 ffffffff  __TI_pprof_out_hndl   
 ffffffff  __TI_prof_data_size   
 ffffffff  __TI_prof_data_start  
